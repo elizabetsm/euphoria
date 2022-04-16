@@ -1,4 +1,8 @@
 pipeline {
+    agent {
+        label 'docker'
+    }
+
     tools{
         jdk 'openjdk-11'
     }
