@@ -9,7 +9,9 @@ pipeline {
 
     stages {
         stage('Start') {
-            sh 'echo START!!!!'
+            steps {
+                sh 'echo START!!!!'
+            }
         }
     }
 }
