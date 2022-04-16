@@ -3,10 +3,6 @@ pipeline {
         label 'docker'
     }
 
-    tools{
-        jdk 'openjdk-11'
-    }
-
     stages {
         stage('Start') {
             steps {
