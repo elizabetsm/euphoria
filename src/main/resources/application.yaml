@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    hikari:
+      password: enjoy
+      username: enjoy
+      jdbc-url: //
