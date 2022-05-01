@@ -6,7 +6,6 @@ pipeline {
         stage('Start') {
             steps {
                 sh 'echo START!!!!'
-                sh 'mkdir LEEEEXXAAAAA'
             }
         }
     }
