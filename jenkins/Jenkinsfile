@@ -1,0 +1,23 @@
+pipeline {
+    agent {
+        label 'agent1'
+    }
+    stages {
+        stage('Start') {
+            steps {
+                sh 'echo START!!!!'
+            }
+        }
+        stage('mvn clean install') {
+            steps {
+                sh 'mvn clean install'
+            }
+        }
+        stage ('java - jar ') {
+            steps {
+                sh 'pwd'
+                sh 'java -jar target/OPEN_PROJECT-1.0-SNAPSHOT.jar'
+            }
+        }
+    }
+}
