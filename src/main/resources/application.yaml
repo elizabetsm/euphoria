@@ -4,3 +4,4 @@ spring:
       password: enjoy
       username: enjoy
       jdbc-url: //
+    driver-class-name: org.postgresql.Driver
