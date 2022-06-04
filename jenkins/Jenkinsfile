@@ -15,7 +15,8 @@ pipeline {
         }
         stage ('java - jar ') {
             steps {
-                sh 'java -jar OPEN_PROECT-1.0-SNAPSHOT.jar'
+                sh 'pwd'
+                sh 'java -jar target/OPEN_PROJECT-1.0-SNAPSHOT.jar'
             }
         }
     }

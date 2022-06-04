@@ -17,6 +17,10 @@ VARS="${VARS1}|${VARS2}" ;\
 docker exec agent1 sh -c "env | egrep -v '^(${VARS})' >> /etc/environment"
 #Устаналиваем git на agent
 docker exec -w /home/jenkins/ agent1 apk "add" "git"
+#Устаналиваем maven на agent
+docker exec -w /home/jenkins/ agent1 apk "add" "maven"
+#Устаналиваем maven на java
+docker exec -w /home/jenkins/ agent1 apk "add" "openjdk11"
 
 #Полезные команды:
 #docker system prune
