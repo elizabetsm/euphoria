@@ -11,9 +11,9 @@ import lombok.NoArgsConstructor;
 @Getter
 @Entity
 public class Car {
-    String markka;
+    String marka;
     String number;
     String type;
     @Id
-    long id;
+    Integer id;
 }

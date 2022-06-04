@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                  	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet id="driver" author="selishchevaa">
+        <createTable tableName="Driver">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" unique="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)"/>
+            <column name="license" type="varchar(255)"/>
+            <column name="licenseDuration" type="varchar(255)"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="Driver"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

@@ -12,7 +12,8 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Driver {
     String name;
-    String categoryDriverLicense;
+    String license;
+    String licenseDuration;
     @Id
-    long id;
+    Integer id;
 }
