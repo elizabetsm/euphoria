@@ -1,6 +1,6 @@
 package com.school21.euphoria.controllers;
 
-import com.school21.euphoria.entity.Car;
+import com.school21.euphoria.entity.CarEntity;
 import com.school21.euphoria.repository.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,7 +25,7 @@ public class CarController {
     @GetMapping
     public String getAllCars(Model model){
         //Sql запрос на получение всех машин
-        List<Car> allCars = carRepository.findAll();
+        List<CarEntity> allCars = carRepository.findAll();
         model.addAttribute("allCars", allCars);
 
         //Путь до странички на фронте
@@ -34,7 +34,7 @@ public class CarController {
     }
 
     @PostMapping
-    public String createCar(Model model, Car car){
+    public String createCar(Model model, CarEntity car){
         carRepository.save(car);
 
         //Путь до странички на фронте

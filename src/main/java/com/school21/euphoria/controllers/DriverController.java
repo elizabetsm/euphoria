@@ -1,6 +1,6 @@
 package com.school21.euphoria.controllers;
 
-import com.school21.euphoria.entity.Driver;
+import com.school21.euphoria.entity.DriverEntity;
 import com.school21.euphoria.repository.DriverRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,7 +25,7 @@ public class DriverController {
     @GetMapping
     public String getAllDrivers(Model model){
         //Sql запрос на получение всех водителей
-        List<Driver> allDrivers = driverRepository.findAll();
+        List<DriverEntity> allDrivers = driverRepository.findAll();
         model.addAttribute("allDrivers", allDrivers);
 
         //Путь до странички на фронте
@@ -34,7 +34,7 @@ public class DriverController {
     }
 
     @PostMapping
-    public String createDriver(Model model, Driver driver){
+    public String createDriver(Model model, DriverEntity driver){
         driverRepository.save(driver);
 
         //Путь до странички на фронте

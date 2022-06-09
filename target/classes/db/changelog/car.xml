@@ -12,6 +12,9 @@
             <column name="marka" type="varchar(255)"/>
             <column name="number" type="varchar(255)"/>
             <column name="type" type="varchar(255)"/>
+            <column name="driver_id" type="int">
+                <constraints nullable="false" foreignKeyName="driver_id" references="Driver(id)"/>
+            </column>
         </createTable>
         <rollback>
             <dropTable tableName="Car"/>

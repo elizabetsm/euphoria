@@ -5,16 +5,16 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                   	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
     <changeSet id="driver" author="selishchevaa">
-        <createTable tableName="Driver">
+        <createTable tableName="driver">
             <column name="id" type="int" autoIncrement="true">
-                <constraints primaryKey="true" unique="true" nullable="false"/>
+                <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="name" type="varchar(255)"/>
             <column name="license" type="varchar(255)"/>
             <column name="licenseDuration" type="varchar(255)"/>
         </createTable>
         <rollback>
-            <dropTable tableName="Driver"/>
+            <dropTable tableName="driver"/>
         </rollback>
     </changeSet>
 </databaseChangeLog>
