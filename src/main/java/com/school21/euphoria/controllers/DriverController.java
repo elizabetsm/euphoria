@@ -33,7 +33,7 @@ public class DriverController {
 
     @GetMapping({"/{id}"})
     public String getOneDriver(@PathVariable Long id, Model model){
-        Driver driver = driverRepository.getById(id);
+        DriverEntity driver = driverRepository.getById(id);
         model.addAttribute("driver", driver);
         return "";
     }
@@ -44,10 +44,8 @@ public class DriverController {
         return "";
     }
 
-
-
     @GetMapping("/new")
-    public String createNewDriver(@ModelAttribute("Driver") Driver driver){
+    public String createNewDriver(@ModelAttribute("Driver") DriverEntity driver){
         return "";
     }
 

@@ -61,7 +61,11 @@
             <artifactId>postgresql</artifactId>
             <version>42.3.6</version>
         </dependency>
-
+        <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>jta</artifactId>
+            <version>1.1</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -71,18 +75,11 @@
                 <artifactId>liquibase-maven-plugin</artifactId>
                 <version>4.11.0</version>
                 <configuration>
-<!--                    <propertyFile>src/resources/db/liquibase.properties</propertyFile>-->
                     <changeLogFile>src/main/resources/db/changelog-master.xml</changeLogFile>
                     <driver>org.postgresql.Driver</driver>
                     <url>jdbc:postgresql://localhost:5432/euphoria</url>
                     <username>java</username>
                     <password>pass</password>
-<!--                    https://www.pvsm.ru/maven/67914-->
-<!--                    <dataDir>${profile.dataDir}</dataDir>-->
-                    <!-- log  -->
-<!--                    <verbose>${profile.verbose}</verbose>-->
-<!--                    <logging>${profile.logging}</logging>-->
-<!--                    <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>-->
                 </configuration>
                 <executions>
                     <execution>
