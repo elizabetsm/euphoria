@@ -13,11 +13,17 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-        stage ('java - jar ') {
-            steps {
-                sh 'pwd'
-                sh 'java -jar target/OPEN_PROJECT-1.0-SNAPSHOT.jar'
-            }
+//         stage ('java - jar ') {
+//             steps {
+//                 sh 'pwd'
+//                 sh 'java -jar target/OPEN_PROJECT-1.0-SNAPSHOT.jar'
+//             }
+//         }
+        stage('docker build'){
+             steps {
+                sh 'docker build -t euphoria:1 .'
+                sh 'docker run euphoria:1'
+             }
         }
     }
 }
