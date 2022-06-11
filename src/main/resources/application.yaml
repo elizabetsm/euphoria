@@ -9,3 +9,5 @@ spring:
     username: java
   liquibase:
     change-log: db/changelog-master.xml
+server:
+  port: 8081

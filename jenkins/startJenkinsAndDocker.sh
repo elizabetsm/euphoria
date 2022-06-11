@@ -15,11 +15,9 @@ VARS1="HOME=|USER=|MAIL=|LC_ALL=|LS_COLORS=|LANG=" ;\
 VARS2="HOSTNAME=|PWD=|TERM=|SHLVL=|LANGUAGE=|_=" ;\
 VARS="${VARS1}|${VARS2}" ;\
 docker exec agent1 sh -c "env | egrep -v '^(${VARS})' >> /etc/environment"
-#Устаналиваем git на agent
+#Устаналиваем git, maven и java на agent
 docker exec -w /home/jenkins/ agent1 apk "add" "git"
-#Устаналиваем maven на agent
 docker exec -w /home/jenkins/ agent1 apk "add" "maven"
-#Устаналиваем maven на java
 docker exec -w /home/jenkins/ agent1 apk "add" "openjdk11"
 
 #Полезные команды:
