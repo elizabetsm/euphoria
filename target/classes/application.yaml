@@ -1,9 +1,0 @@
-spring:
-  datasource:
-    hikari:
-      password: enjoy
-      username: enjoy
-      jdbc-url: //
-    url: jdbc:postgresql://localhost:5432/postgres
-  liquibase:
-    change-log: db/changelog-master.xml

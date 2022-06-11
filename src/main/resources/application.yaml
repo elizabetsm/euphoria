@@ -1,9 +1,11 @@
 spring:
   datasource:
     hikari:
-      password: enjoy
-      username: enjoy
-      jdbc-url: //
-    url: jdbc:postgresql://localhost:5432/postgres
+      password: pass
+      username: java
+      jdbc-url: jdbc:postgresql://localhost:5432/euphoria
+    url: jdbc:postgresql://localhost:5432/euphoria
+    password: pass
+    username: java
   liquibase:
     change-log: db/changelog-master.xml

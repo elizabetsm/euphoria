@@ -74,7 +74,9 @@
 <!--                    <propertyFile>src/resources/db/liquibase.properties</propertyFile>-->
                     <changeLogFile>src/main/resources/db/changelog-master.xml</changeLogFile>
                     <driver>org.postgresql.Driver</driver>
-                    <url>jdbc:postgresql://localhost:5432/postgres</url>
+                    <url>jdbc:postgresql://localhost:5432/euphoria</url>
+                    <username>java</username>
+                    <password>pass</password>
 <!--                    https://www.pvsm.ru/maven/67914-->
 <!--                    <dataDir>${profile.dataDir}</dataDir>-->
                     <!-- log  -->
