@@ -1,10 +1,8 @@
 package com.school21.euphoria.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.Objects;
 
 @Entity
 @Getter

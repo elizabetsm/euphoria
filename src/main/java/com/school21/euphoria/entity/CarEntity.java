@@ -1,10 +1,9 @@
 package com.school21.euphoria.entity;
 
-import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import javax.persistence.*;
 
-import java.util.Objects;
 
 @Entity
 @Getter
@@ -14,7 +13,7 @@ public class CarEntity {
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")
-    private Long id;
+    private int id;
     @Basic
     @Column(name = "marka")
     private String marka;
