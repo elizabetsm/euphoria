@@ -10,12 +10,17 @@
             <th>Id</th>
             <th>Marka</th>
             <th>Number</th>
+            <th>Type</th>
         </tr>
         <tr th:each="cars : ${allCars}">
             <td th:text="${cars.getId()}"></td>
             <td th:text="${cars.getMarka()}"></td>
             <td th:text="${cars.getNumber()}"></td>
+            <td th:text="${cars.getType()}"></td>
         </tr>
     </table>
+    <br/>
+    <br/>
+    <a href="/cars/new">Add new car</a>
 </body>
 </html>

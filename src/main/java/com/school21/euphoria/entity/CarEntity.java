@@ -2,6 +2,7 @@ package com.school21.euphoria.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+
 import javax.persistence.*;
 
 
@@ -10,7 +11,7 @@ import javax.persistence.*;
 @Setter
 @Table(name = "Car")
 public class CarEntity {
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")
     private int id;

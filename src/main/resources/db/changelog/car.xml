@@ -12,13 +12,13 @@
         </preConditions>
         <createTable tableName="car">
             <column name="id" type="int" autoIncrement="true">
-                <constraints primaryKey="true" nullable="false"/>
+                <constraints primaryKey="true" nullable="false" unique="true"/>
             </column>
             <column name="marka" type="varchar(255)"/>
             <column name="number" type="varchar(255)"/>
             <column name="type" type="varchar(255)"/>
             <column name="driver_id" type="int">
-                <constraints foreignKeyName="driver_id" references="driver(id)"/>
+                <constraints foreignKeyName="driver_id" references="driver(id)" nullable="true"/>
             </column>
         </createTable>
         <rollback>
